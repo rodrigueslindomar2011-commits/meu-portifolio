@@ -7,8 +7,8 @@
     <title>Sorteador de numeros</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <img src="Shapes.png" alt="imagem de fundo">
     <h1>numbers</h1>
     <img src="Frame.png" alt="logo" class="logo">
     <div class="projetos"></div>
@@ -16,22 +16,28 @@
     <header>
         <div>online-gratuito</div>
         <h1>Sorteador de numeros</h1>
-          </header>
-          <div class="question"></div>
-          <div class="item1">
+    </header>
+    <div class="question"></div>
+    <div class="item1">
         <span>Como funciona o sorteador de números?</span>
         <p>O sorteador utiliza um algoritimo de geraçaõ aleatória para criar
             números dentro do intervalo especificado pelo usuário</p>
-            </div>
-            <div class="item2">
+    </div>
+    <div class="item2">
         <span>Posso escolher o intervalo dos números</span>
         <p>sim, você pode definir os valores mínimos e máximo para o intervalo dos números sorteados </p>
-        <h2>Quero sortear:</h2>
+        <div class="contantform">
+            <div class="title">
+                <fieldset>
+                    <legend>Formulario</legend>
+                <h3>Quero sortear</h3>
+                <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É
+                    rápido e
+                    fácil!</p>
+                </fieldset>
+            </div>
         </div>
-        <div class="sorteio"></div>
-        <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e
-            fácil!</p>
-
+    </div>
 </body>
 
 </html>
