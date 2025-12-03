@@ -1,43 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Sora:wght@800&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorteador de numeros</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sorteador</title>
 </head>
 <body>
-    <img src="Shapes.png" alt="imagem de fundo">
-    <h1>numbers</h1>
-    <img src="Frame.png" alt="logo" class="logo">
-    <div class="projetos"></div>
-    <div class="container"></div>
-    <header>
-        <div>online-gratuito</div>
-        <h1>Sorteador de numeros</h1>
-    </header>
-    <div class="question"></div>
-    <div class="item1">
-        <span>Como funciona o sorteador de números?</span>
-        <p>O sorteador utiliza um algoritimo de geraçaõ aleatória para criar
-            números dentro do intervalo especificado pelo usuário</p>
-    </div>
-    <div class="item2">
-        <span>Posso escolher o intervalo dos números</span>
-        <p>sim, você pode definir os valores mínimos e máximo para o intervalo dos números sorteados </p>
-        <div class="contantform">
-            <div class="title">
-                <fieldset>
-                    <legend>Formulario</legend>
-                <h3>Quero sortear</h3>
-                <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É
-                    rápido e
-                    fácil!</p>
-                </fieldset>
+    <div class="container">
+    <div class="Projeto">
+        <header>
+            <img src="logo.png" alt="NUMBERS">
+        </header>
+            <header>
+                <h1 class="sora">Sorteador de Números</h1>
+                <p>Projeto simples que sorteia um número entre dois valores fornecidos pelo usuário.</p>
+            </header>
+            <div class="questions">
+                <div class="itens">
+                    <span>Como funciona o sorteador de números?</span>
+                    <p>O sorteador utiliza um algoritmo de geração de números aleatórios para escolher um número dentro
+                        do intervalo especificado pelo usuário.</p>
+                </div>
+                <div class="item2">
+                    <span>Posso escolher o intervalo dos números?</span>
+                    <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+                </div>
+            </div>
+            <div class="contentform">
+                <div class="title">
+                    <h3>Quero sortear:</h3>
+                    <p>defina o intervalo e a quantidade de números, cliques em "Sortear" e veja os resultados na tela.
+                        É rápido e fácil!</p>
+                </div>
+                <div class="form">
+                    <fieldset>
+                        <legend>Formulário de Sorteio</legend>
+                        <form action="sorteio.html" method="get">
+                            <label for="minimo">Números:</label>
+                            <input type="number" id="minimo" name="minimo" placeholder="1" required>
+
+                            <label for="maximo">De</label>
+                            <input type="number" id="maximo" name="maximo" placeholder="500" required>
+
+                            <label for="quantidade">De</label>
+                            <input type="number" id="quantidade" name="quantidade" required>
+
+                            <button type="submit">Sortear</button>
+                    </fieldset>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </body>
-
 </html>
+
+:root{
+    --bg-primary: #020202;
+    --detail: purple;
+}
+span{
+    color: var(--detail);
+    font-weight: 500;
+}
+.sora {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+  }
+html{
+    color: white;
+    background-color: var(--bg-primary);
+    background-image: url(./geometria.png);
+}
+h1{
+    font-size: 72px;
+    text-transform: uppercase;
+    line-height: 130%;
+    font-weight: bolder;
+    letter-spacing: -4px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.roboto-flex {
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0,
+      "wdth" 100,
+      "GRAD" 0,
+      "XOPQ" 96,
+      "XTRA" 468,
+      "YOPQ" 79,
+      "YTAS" 750,
+      "YTDE" -203,
+      "YTFI" 738,
+      "YTLC" 514,
+      "YTUC" 712;
+  }
