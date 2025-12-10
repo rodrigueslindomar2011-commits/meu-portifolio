@@ -18,7 +18,7 @@
 
 <body>
     <div>
-        <img src="logo.png" alt="NUMBERS">
+        <img src="frame.png" alt="NUMBERS">
     </div>
     <div class="container">
         <header>
@@ -48,18 +48,23 @@
             </div>
             <div class="form">
                 <fieldset>
-                    <legend>Formulário de Sorteio</legend>
+                    <legend></legend>
                     <form action="sorteio.html" method="get">
-                        <label for="minimo">Números:</label>
-                        <input type="number" id="minimo" name="minimo" placeholder="1" required>
-
-                        <label for="maximo">De</label>
-                        <input type="number" id="maximo" name="maximo" placeholder="500" required>
-
-                        <label for="quantidade">De</label>
-                        <input type="number" id="quantidade" name="quantidade" required>
-
-                        <button type="submit">Sortear</button>
+                        <div class="bloco">
+                            <div class="coluna">
+                                <label for="minimo">Números:</label><br>
+                                <input type="number" id="minimo" name="minimo" placeholder="1" required>
+                            </div>
+                            <div class="coluna">
+                                <label for="maximo">De:</label><br>
+                                <input type="number" id="maximo" name="maximo" placeholder="500" required>
+                            </div>
+                             <div class="coluna">
+                                <label for="quantidade">A:</label><br>
+                                <input type="number" id="quantidade" name="quantidade" required>
+                            </div>
+                        </div>
+                            <button type="submit">Sortear</button>
                 </fieldset>
                 </form>
             </div>
@@ -127,5 +132,40 @@ h1{
   letter-spacing: 0%;
   font-size: 16px;
 }
+button{
+    background-color: #24222E;
+    border-radius: 8px;
+    border: 0;
+    width: 100%;
+    height: 56px;
+    color: white;
+}
 
+input{
+    background-color: #101112;
+    width: 70px;
+    height: 30px;
+    border: 0;
+    border-radius: 8px;
+}
+fieldset{
+    width: 400px;
+    color:black ;
+}
+.bloco{
+    width: 100%;
+    display: flex;
+    gap: 12px;
 
+}
+.coluna{
+    display: inline-block;
+    
+}
+::placeholder{
+    font-size: 20px;
+    color: white;
+}
+label{
+    color: white;
+}
