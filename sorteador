@@ -18,7 +18,7 @@
 
 <body>
     <div>
-        <img src="frame.png" alt="NUMBERS">
+        <img src="logo.png" alt="NUMBERS">
     </div>
     <div class="container">
         <header>
@@ -48,7 +48,7 @@
             </div>
             <div class="form">
                 <fieldset>
-                    <legend></legend>
+                    <legend>quero sortear</legend>
                     <form action="sorteio.html" method="get">
                         <div class="bloco">
                             <div class="coluna">
@@ -64,7 +64,7 @@
                                 <input type="number" id="quantidade" name="quantidade" required>
                             </div>
                         </div>
-                            <button type="submit">Sortear</button>
+                            <button type="submit">Sortear <img src="Frame.png" alt=""></button>
                 </fieldset>
                 </form>
             </div>
@@ -104,6 +104,7 @@ h1{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    gap: 108px;
 }
 .roboto-flex {
     font-family: "Roboto Flex", sans-serif;
@@ -136,9 +137,14 @@ button{
     background-color: #24222E;
     border-radius: 8px;
     border: 0;
+    display: inline-flex;
     width: 100%;
     height: 56px;
     color: white;
+    font-size: 20px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
 }
 
 input{
@@ -168,4 +174,7 @@ fieldset{
 }
 label{
     color: white;
+}
+.contentform{
+    margin: auto 0;
 }
