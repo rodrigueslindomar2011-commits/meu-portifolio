@@ -1,0 +1,18 @@
+algoritimo "soma_dois_numeros"
+var
+ //Declaração das variáveis
+  n1, n2, soma : real
+
+inicio
+  // Entrada de dados 
+  escreva("digite o primeiro número : ")
+  leia (n1)
+  escreva("digite o segundo número : ")
+leia (n2)
+
+  //processamento
+  soma := n1 + n2
+
+  // saída de dados
+  escreval("a soma é: ", soma)
+fimalgoritimo
