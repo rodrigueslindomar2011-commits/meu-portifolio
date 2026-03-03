@@ -20,56 +20,110 @@
     <div>
         <img src="logo.png" alt="NUMBERS">
     </div>
+
     <div class="container">
         <header>
             <h2 class="roboto-mono">ONLINE - GRATUITO</h2>
             <h1 class="sora">Sorteador de Números</h1>
             <p>Projeto simples que sorteia um número entre dois valores fornecidos pelo usuário.</p>
+
             <div class="questions">
                 <div class="itens">
                     <span>Como funciona o sorteador de números?</span>
-                    <p class="roboto-flex">O sorteador utiliza um algoritmo de geração de números aleatórios para
-                        escolher um número dentro
-                        do intervalo especificado pelo usuário.</p>
+                    <p class="roboto-flex">
+                        O sorteador utiliza um algoritmo de geração de números aleatórios para
+                        escolher um número dentro do intervalo especificado pelo usuário.
+                    </p>
                 </div>
+
                 <div class="item2">
                     <span>Posso escolher o intervalo dos números?</span>
-                    <p class="roboto-flex">Sim, você pode definir os valores mínimo e máximo para o intervalo dos
-                        números sorteados.</p>
+                    <p class="roboto-flex">
+                        Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.
+                    </p>
                 </div>
             </div>
         </header>
+
         <div class="contentform">
             <div class="title">
                 <h3>Quero sortear:</h3>
-                <p class="roboto-flex">defina o intervalo e a quantidade de números, cliques em "Sortear" e veja os
-                    resultados na tela.
-                    É rápido e fácil!</p>
+                <p class="roboto-flex">
+                    Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os
+                    resultados na tela. É rápido e fácil!
+                </p>
             </div>
+
             <div class="form">
                 <fieldset>
-                    <legend>quero sortear</legend>
-                    <form action="sorteio.html" method="get">
+                    <legend>Quero sortear</legend>
+
+                    <form id="formSorteio">
                         <div class="bloco">
+
                             <div class="coluna">
-                                <label for="minimo">Números:</label><br>
-                                <input type="number" id="minimo" name="minimo" placeholder="1" required>
+                                <label for="minimo">De:</label><br>
+                                <input type="number" id="minimo" placeholder="1" required>
                             </div>
+
                             <div class="coluna">
-                                <label for="maximo">De:</label><br>
-                                <input type="number" id="maximo" name="maximo" placeholder="500" required>
+                                <label for="maximo">Até:</label><br>
+                                <input type="number" id="maximo" placeholder="500" required>
                             </div>
-                             <div class="coluna">
-                                <label for="quantidade">A:</label><br>
-                                <input type="number" id="quantidade" name="quantidade" required>
+
+                            <div class="coluna">
+                                <label for="quantidade">Quantidade:</label><br>
+                                <input type="number" id="quantidade" placeholder="1" required>
                             </div>
+
                         </div>
-                            <button type="submit">Sortear <img src="Frame.png" alt=""></button>
+
+                        <button type="submit">
+                            Sortear <img src="Frame.png" alt="">
+                        </button>
+                    </form>
+
                 </fieldset>
-                </form>
+
+                <div id="resultado" style="margin-top:20px; font-size:20px;"></div>
+
             </div>
         </div>
     </div>
+
+    <script>
+        const form = document.getElementById("formSorteio");
+        const resultadoDiv = document.getElementById("resultado");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const minimo = parseInt(document.getElementById("minimo").value);
+            const maximo = parseInt(document.getElementById("maximo").value);
+            const quantidade = parseInt(document.getElementById("quantidade").value);
+
+            if (minimo >= maximo) {
+                resultadoDiv.innerHTML = "O valor mínimo deve ser menor que o máximo.";
+                return;
+            }
+
+            if (quantidade <= 0) {
+                resultadoDiv.innerHTML = "A quantidade deve ser maior que zero.";
+                return;
+            }
+
+            let numerosSorteados = [];
+
+            for (let i = 0; i < quantidade; i++) {
+                let numero = Math.floor(Math.random() * (maximo - minimo + 1)) + minimo;
+                numerosSorteados.push(numero);
+            }
+
+            resultadoDiv.innerHTML = 
+                "<strong>Número(s) sorteado(s):</strong> " + numerosSorteados.join(", ");
+        });
+    </script>
+
 </body>
 
 </html>
