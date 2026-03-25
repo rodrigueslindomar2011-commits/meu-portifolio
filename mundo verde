@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>EcoGuard-Tech</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+color:white;
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+background-size:cover;
+}
+
+/* layout */
+.container{
+display:flex;
+height:100vh;
+}
+
+.left{
+flex:1;
+padding:60px;
+}
+
+.logo{
+color:#4cff7a;
+}
+
+/* IMAGEM EXTRA */
+.img-box{
+margin-top:20px;
+}
+
+.img-box img{
+width:250px;
+border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+.right{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.box{
+background:#1b4332;
+padding:30px;
+border-radius:12px;
+width:300px;
+text-align:center;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:none;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:10px;
+margin-top:10px;
+border:none;
+border-radius:8px;
+background:#4cff7a;
+font-weight:bold;
+cursor:pointer;
+}
+
+.link{
+color:#4cff7a;
+cursor:pointer;
+display:block;
+margin-top:10px;
+}
+
+.hidden{
+display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+    
+<div class="container">
+
+<div class="left">
+
+<h1 class="logo">🌿 EcoGuard-Tech</h1>
+
+<h2>Protegendo o Cerrado</h2>
+
+<p>
+Plataforma voltada para monitoramento ambiental, proteção
+do cerrado e incentivo ao reflorestamento.
+</p>
+
+<div class="img-box">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+</div>
+
+</div>
+
+<div class="right">
+
+<!-- LOGIN -->
+<div class="box" id="loginBox">
+
+<h2>Login</h2>
+
+<input type="email" id="loginEmail" placeholder="Email">
+<input type="password" id="loginSenha" placeholder="Senha">
+
+<button onclick="login()">Entrar</button>
+
+<span class="link" onclick="mostrarCadastro()">Criar conta</span>
+
+<p id="msgLogin"></p>
+
+</div>
+
+<!-- CADASTRO -->
+<div class="box hidden" id="cadastroBox">
+
+<h2>Criar Conta</h2>
+
+<input type="text" id="cadNome" placeholder="Nome">
+<input type="email" id="cadEmail" placeholder="Email">
+<input type="password" id="cadSenha" placeholder="Senha">
+
+<button onclick="cadastrar()">Cadastrar</button>
+
+<span class="link" onclick="mostrarLogin()">Voltar para login</span>
+
+<p id="msgCadastro"></p>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+/* ===== BANCO LOCAL ===== */
+
+function getUsuarios(){
+return JSON.parse(localStorage.getItem("usuarios")) || []
+}
+
+function setUsuarios(lista){
+localStorage.setItem("usuarios", JSON.stringify(lista))
+}
+
+/* ===== CADASTRO ===== */
+
+function cadastrar(){
+
+let nome = document.getElementById("cadNome").value
+let email = document.getElementById("cadEmail").value
+let senha = document.getElementById("cadSenha").value
+let msg = document.getElementById("msgCadastro")
+
+if(!nome || !email || !senha){
+msg.innerHTML = "Preencha todos os campos"
+msg.style.color = "orange"
+return
+}
+
+let usuarios = getUsuarios()
+
+if(usuarios.find(u => u.email === email)){
+msg.innerHTML = "Email já cadastrado"
+msg.style.color = "red"
+return
+}
+
+usuarios.push({nome,email,senha})
+setUsuarios(usuarios)
+
+msg.innerHTML = "Conta criada com sucesso!"
+msg.style.color = "lightgreen"
+
+}
+
+/* ===== LOGIN ===== */
+
+function login(){
+
+let email = document.getElementById("loginEmail").value
+let senha = document.getElementById("loginSenha").value
+let msg = document.getElementById("msgLogin")
+
+let usuarios = getUsuarios()
+
+let user = usuarios.find(u => u.email === email && u.senha === senha)
+
+if(user){
+
+localStorage.setItem("logado","true")
+window.location.href = "dashboard.html"
+
+}else{
+
+msg.innerHTML = "Email ou senha inválidos"
+msg.style.color = "red"
+
+}
+
+}
+
+/* ===== TROCAR TELAS ===== */
+
+function mostrarCadastro(){
+document.getElementById("loginBox").classList.add("hidden")
+document.getElementById("cadastroBox").classList.remove("hidden")
+}
+
+function mostrarLogin(){
+document.getElementById("cadastroBox").classList.add("hidden")
+document.getElementById("loginBox").classList.remove("hidden")
+}
+
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#081c15;
+color:white;
+}
+
+/* MENU */
+.nav{
+background:#1b4332;
+padding:15px;
+display:flex;
+justify-content:space-between;
+}
+
+.nav h2{
+color:#4cff7a;
+}
+
+/* CONTEÚDO */
+.container{
+padding:30px;
+}
+
+/* CARDS */
+.cards{
+display:flex;
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+flex:1;
+background:#1b4332;
+padding:20px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-top:10px;
+}
+
+/* BOTÃO */
+button{
+padding:10px;
+background:#4cff7a;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="nav">
+<h2>🌿 EcoGuard Dashboard</h2>
+<button onclick="logout()">Sair</button>
+</div>
+
+<div class="container">
+
+<h1>Bem-vindo ao sistema 🌎</h1>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌱 Monitoramento</h3>
+<p>Áreas monitoradas em tempo real.</p>
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+</div>
+
+<div class="card">
+<h3>🌳 Reflorestamento</h3>
+<p>Projetos ativos de plantio.</p>
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+</div>
+
+<div class="card">
+<h3>🛡️ Proteção</h3>
+<p>Prevenção contra desmatamento.</p>
+<img src="https://images.unsplash.com/photo-1473773508845-188df298d2d1">
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+/* PROTEÇÃO DE ROTA */
+
+if(localStorage.getItem("logado") !== "true"){
+window.location.href = "index.html"
+}
+
+/* LOGOUT */
+
+function logout(){
+localStorage.removeItem("logado")
+window.location.href = "index.html"
+}
+
+</script>
+
+</body>
+</html>
