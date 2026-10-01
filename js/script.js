@@ -52,26 +52,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       FECHAR MENU AO CLICAR EM UM LINK
+       FECHAR MENU AO CLICAR EM LINK INTERNO
+       NÃO INTERFERE EM LINKS EXTERNOS
     ===================================================== */
 
     navLinks.forEach(link => {
 
         link.addEventListener("click", () => {
 
-            if (!nav || !menuButton) {
-                return;
+            const href = link.getAttribute("href");
+
+            /*
+               Só fecha o menu automaticamente para
+               links internos do próprio portfólio.
+            */
+
+            if (href && href.startsWith("#")) {
+
+                if (nav) {
+                    nav.classList.remove("active");
+                }
+
+                if (menuButton) {
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuButton.innerHTML =
+                        '<i class="fa-solid fa-bars"></i>';
+
+                }
+
             }
-
-            nav.classList.remove("active");
-
-            menuButton.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuButton.innerHTML =
-                '<i class="fa-solid fa-bars"></i>';
 
         });
 
@@ -133,6 +147,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
+       PROTEÇÃO DOS LINKS EXTERNOS
+    ===================================================== */
+
+    /*
+       Links externos continuam sendo links normais.
+       O JavaScript não cancela o comportamento deles.
+
+       São considerados externos:
+       - https://
+       - http://
+       - mailto:
+       - tel:
+       - whatsapp
+    */
+
+    const externalLinks =
+        document.querySelectorAll(
+            'a[href^="http://"], ' +
+            'a[href^="https://"], ' +
+            'a[href^="mailto:"], ' +
+            'a[href^="tel:"]'
+        );
+
+    externalLinks.forEach(link => {
+
+        link.addEventListener("click", event => {
+
+            /*
+               IMPORTANTE:
+               Não usar preventDefault() aqui.
+               O navegador deve abrir normalmente.
+            */
+
+            event.stopPropagation();
+
+        });
+
+    });
+
+
+    /* =====================================================
        CARROSSEL DE PROJETOS
     ===================================================== */
 
@@ -178,24 +233,10 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        const visible =
-            getVisibleProjects();
-
         const gap = 22;
 
-        let cardWidth;
-
-        if (visible === 1) {
-
-            cardWidth =
-                projectCards[0].offsetWidth + gap;
-
-        } else {
-
-            cardWidth =
-                projectCards[0].offsetWidth + gap;
-
-        }
+        const cardWidth =
+            projectCards[0].offsetWidth + gap;
 
         const maxPosition =
             getMaxPosition();
@@ -215,7 +256,6 @@ document.addEventListener("DOMContentLoaded", () => {
             `translateX(-${translateX}px)`;
 
         atualizarDots();
-
         atualizarBotoes();
 
     }
@@ -242,11 +282,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     currentProject++;
 
                 } else {
-
-                    /*
-                       Volta para o começo
-                       quando chega ao último.
-                    */
 
                     currentProject = 0;
 
@@ -278,11 +313,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     currentProject--;
 
                 } else {
-
-                    /*
-                       Vai para o último
-                       quando está no começo.
-                    */
 
                     currentProject = maxPosition;
 
@@ -354,11 +384,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        /*
-           Não desabilitamos os botões,
-           porque o carrossel é circular.
-        */
-
         if (prevProject) {
 
             prevProject.setAttribute(
@@ -394,11 +419,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const tag =
                 document.activeElement.tagName;
-
-            /*
-               Não interfere quando o usuário
-               estiver digitando.
-            */
 
             if (
                 tag === "INPUT" ||
@@ -496,20 +516,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (distance > 0) {
 
-            /*
-               Arrastou para esquerda
-            */
-
             currentProject =
                 currentProject < maxPosition
                     ? currentProject + 1
                     : 0;
 
         } else {
-
-            /*
-               Arrastou para direita
-            */
 
             currentProject =
                 currentProject > 0
@@ -704,7 +716,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       ESTILOS DAS ANIMAÇÕES PELO JAVASCRIPT
+       ESTILOS DAS ANIMAÇÕES
     ===================================================== */
 
     const animationStyle =
@@ -792,7 +804,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       EFEITO DE DIGITAÇÃO DO CURSOR
+       EFEITO DO CURSOR
     ===================================================== */
 
     const cursor =
