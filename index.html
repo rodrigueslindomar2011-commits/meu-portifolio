@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -19,10 +20,19 @@
         content="Lindomar Pereira Rodrigues da Costa"
     >
 
-    <title>Lindomar Pereira Rodrigues da Costa | Desenvolvedor Web</title>
+    <title>
+        Lindomar Pereira Rodrigues da Costa | Desenvolvedor Web
+    </title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- ==================================================
+         GOOGLE FONTS
+    =================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
     <link
         rel="preconnect"
@@ -35,62 +45,114 @@
         rel="stylesheet"
     >
 
-    <!-- Font Awesome -->
+
+    <!-- ==================================================
+         FONT AWESOME
+    =================================================== -->
+
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
-    <!-- CSS -->
+
+    <!-- ==================================================
+         CSS PRINCIPAL
+    =================================================== -->
+
     <link
         rel="stylesheet"
         href="css/style.css"
     >
+
 </head>
 
+
 <body>
+
 
     <!-- ==================================================
          HEADER
     =================================================== -->
 
-    <header class="header" id="header">
+    <header
+        class="header"
+        id="header"
+    >
 
         <div class="container nav-container">
 
-            <a href="#inicio" class="logo">
+
+            <!-- LOGO -->
+
+            <a
+                href="#inicio"
+                class="logo"
+                aria-label="Voltar para o início"
+            >
+
                 <span>&lt;</span>
+
                 LR
+
                 <span>/&gt;</span>
+
             </a>
 
-            <nav class="nav" id="nav">
 
-                <a href="#inicio" class="nav-link active">
+            <!-- NAVEGAÇÃO -->
+
+            <nav
+                class="nav"
+                id="nav"
+            >
+
+                <a
+                    href="#inicio"
+                    class="nav-link active"
+                >
                     Início
                 </a>
 
-                <a href="#sobre" class="nav-link">
+                <a
+                    href="#sobre"
+                    class="nav-link"
+                >
                     Sobre
                 </a>
 
-                <a href="#habilidades" class="nav-link">
+                <a
+                    href="#habilidades"
+                    class="nav-link"
+                >
                     Habilidades
                 </a>
 
-                <a href="#projetos" class="nav-link">
+                <a
+                    href="#projetos"
+                    class="nav-link"
+                >
                     Projetos
                 </a>
 
-                <a href="#trajetoria" class="nav-link">
+                <a
+                    href="#trajetoria"
+                    class="nav-link"
+                >
                     Trajetória
                 </a>
 
-                <a href="#contato" class="nav-link">
+                <a
+                    href="#contato"
+                    class="nav-link"
+                >
                     Contato
                 </a>
 
             </nav>
+
+
+            <!-- BOTÃO CONTATO -->
 
             <a
                 href="#contato"
@@ -99,17 +161,25 @@
                 Vamos conversar
             </a>
 
+
+            <!-- MENU MOBILE -->
+
             <button
+                type="button"
                 class="menu-button"
                 id="menuButton"
                 aria-label="Abrir menu"
+                aria-expanded="false"
             >
+
                 <i class="fa-solid fa-bars"></i>
+
             </button>
 
         </div>
 
     </header>
+
 
 
     <!-- ==================================================
@@ -128,94 +198,143 @@
             id="inicio"
         >
 
-            <div class="hero-grid"></div>
+            <div
+                class="hero-grid"
+                aria-hidden="true"
+            ></div>
+
 
             <div class="container hero-container">
 
+
+                <!-- ==================================================
+                     TEXTO
+                =================================================== -->
+
                 <div class="hero-content">
 
+
                     <span class="hero-tag">
-                        <span class="status-dot"></span>
+
+                        <span
+                            class="status-dot"
+                            aria-hidden="true"
+                        ></span>
+
                         Disponível para novos projetos
+
                     </span>
+
 
                     <p class="hero-intro">
                         Olá, eu sou
                     </p>
 
+
                     <h1>
+
                         Lindomar
-                        <span>Rodrigues.</span>
+
+                        <span>
+                            Rodrigues.
+                        </span>
+
                     </h1>
+
 
                     <h2>
                         Desenvolvedor Web
                     </h2>
 
+
                     <p class="hero-description">
+
                         Transformo ideias em experiências digitais
                         modernas, funcionais e responsivas.
                         Desenvolvo projetos utilizando tecnologias
                         web, frontend, backend e banco de dados.
+
                     </p>
 
+
+                    <!-- BOTÕES -->
+
                     <div class="hero-actions">
+
 
                         <a
                             href="#projetos"
                             class="button button-primary"
                         >
+
                             <i class="fa-solid fa-code"></i>
+
                             Ver meus projetos
+
                         </a>
+
 
                         <a
                             href="#contato"
                             class="button button-outline"
                         >
+
                             Entrar em contato
+
                         </a>
 
                     </div>
 
 
-                    <!-- REDES SOCIAIS -->
+                    <!-- ==================================================
+                         REDES SOCIAIS
+                    =================================================== -->
 
                     <div class="hero-socials">
 
-                        <!-- GitHub -->
+
+                        <!-- GITHUB -->
 
                         <a
                             href="https://github.com/rodrigueslindomar2011-commits"
+                            class="external-link"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="GitHub"
+                            aria-label="Abrir GitHub"
                         >
+
                             <i class="fa-brands fa-github"></i>
+
                         </a>
 
 
-                        <!-- LinkedIn -->
+                        <!-- LINKEDIN -->
 
                         <a
                             href="https://www.linkedin.com/in/lindomar-pereira-rodrigues-da-costa/"
+                            class="external-link"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="LinkedIn"
+                            aria-label="Abrir LinkedIn"
                         >
+
                             <i class="fa-brands fa-linkedin-in"></i>
+
                         </a>
 
 
-                        <!-- Instagram -->
+                        <!-- INSTAGRAM -->
 
                         <a
                             href="https://www.instagram.com/lind.omar1105/"
+                            class="external-link"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Instagram"
+                            aria-label="Abrir Instagram"
                         >
+
                             <i class="fa-brands fa-instagram"></i>
+
                         </a>
 
                     </div>
@@ -223,19 +342,32 @@
                 </div>
 
 
-                <!-- VISUAL DO HERO -->
+
+                <!-- ==================================================
+                     VISUAL DO HERO
+                =================================================== -->
 
                 <div class="hero-visual">
 
+
+                    <!-- JANELA DE CÓDIGO -->
+
                     <div class="code-window">
+
 
                         <div class="window-top">
 
+
                             <div class="window-buttons">
+
                                 <span></span>
+
                                 <span></span>
+
                                 <span></span>
+
                             </div>
+
 
                             <span class="window-title">
                                 developer.js
@@ -244,7 +376,9 @@
                         </div>
 
 
+
                         <div class="code-content">
+
 
                             <p>
 
@@ -260,9 +394,11 @@
 
                             </p>
 
+
                             <p class="indent">
                                 {
                             </p>
+
 
                             <p class="indent-2">
 
@@ -274,6 +410,7 @@
 
                             </p>
 
+
                             <p class="indent-2">
 
                                 area:
@@ -283,6 +420,7 @@
                                 </span>,
 
                             </p>
+
 
                             <p class="indent-2">
 
@@ -294,6 +432,7 @@
 
                             </p>
 
+
                             <p class="indent-2">
 
                                 criatividade:
@@ -303,6 +442,7 @@
                                 </span>,
 
                             </p>
+
 
                             <p class="indent-2">
 
@@ -314,9 +454,11 @@
 
                             </p>
 
+
                             <p class="indent">
                                 };
                             </p>
+
 
                             <p class="cursor-line">
                                 <span>_</span>
@@ -327,7 +469,8 @@
                     </div>
 
 
-                    <!-- CARD FLUTUANTE 1 -->
+
+                    <!-- CARD FLUTUANTE -->
 
                     <div class="floating-card card-one">
 
@@ -348,7 +491,8 @@
                     </div>
 
 
-                    <!-- CARD FLUTUANTE 2 -->
+
+                    <!-- CARD FLUTUANTE -->
 
                     <div class="floating-card card-two">
 
@@ -373,6 +517,9 @@
             </div>
 
 
+
+            <!-- INDICADOR DE SCROLL -->
+
             <div class="scroll-indicator">
 
                 <span>
@@ -386,6 +533,7 @@
         </section>
 
 
+
         <!-- ==================================================
              SOBRE
         =================================================== -->
@@ -396,6 +544,7 @@
         >
 
             <div class="container">
+
 
                 <div class="section-heading">
 
@@ -416,6 +565,7 @@
                     </div>
 
                 </div>
+
 
 
                 <div class="about-grid">
@@ -451,6 +601,7 @@
                     </div>
 
 
+
                     <!-- TEXTO -->
 
                     <div class="about-content">
@@ -459,27 +610,38 @@
                             Quem sou eu?
                         </span>
 
+
                         <h3>
+
                             Desenvolvedor apaixonado
                             por tecnologia e criação.
+
                         </h3>
 
+
                         <p>
+
                             Sou Lindomar Pereira Rodrigues da Costa,
                             estudante e desenvolvedor em formação,
                             interessado em tecnologia, programação
                             e criação de soluções digitais.
+
                         </p>
 
+
                         <p>
+
                             Meu objetivo é transformar conhecimentos
                             em projetos reais, explorando desde a
                             criação de interfaces até a construção
                             de sistemas completos.
+
                         </p>
 
 
+
                         <div class="about-highlights">
+
 
                             <div>
 
@@ -535,6 +697,7 @@
         </section>
 
 
+
         <!-- ==================================================
              HABILIDADES
         =================================================== -->
@@ -545,6 +708,7 @@
         >
 
             <div class="container">
+
 
                 <div class="section-heading centered">
 
@@ -567,10 +731,9 @@
                 </div>
 
 
+
                 <div class="skills-grid">
 
-
-                    <!-- HTML -->
 
                     <article class="skill-card">
 
@@ -592,7 +755,6 @@
                     </article>
 
 
-                    <!-- CSS -->
 
                     <article class="skill-card">
 
@@ -614,7 +776,6 @@
                     </article>
 
 
-                    <!-- JAVASCRIPT -->
 
                     <article class="skill-card">
 
@@ -636,7 +797,6 @@
                     </article>
 
 
-                    <!-- NODE -->
 
                     <article class="skill-card">
 
@@ -658,7 +818,6 @@
                     </article>
 
 
-                    <!-- BANCO -->
 
                     <article class="skill-card">
 
@@ -680,7 +839,6 @@
                     </article>
 
 
-                    <!-- GIT -->
 
                     <article class="skill-card">
 
@@ -708,6 +866,7 @@
         </section>
 
 
+
         <!-- ==================================================
              PROJETOS
         =================================================== -->
@@ -718,6 +877,7 @@
         >
 
             <div class="container">
+
 
                 <div class="projects-heading">
 
@@ -745,7 +905,9 @@
 
                     <div class="carousel-controls">
 
+
                         <button
+                            type="button"
                             id="prevProject"
                             aria-label="Projeto anterior"
                         >
@@ -756,6 +918,7 @@
 
 
                         <button
+                            type="button"
                             id="nextProject"
                             aria-label="Próximo projeto"
                         >
@@ -769,6 +932,7 @@
                 </div>
 
 
+
                 <div class="projects-carousel">
 
                     <div
@@ -778,10 +942,11 @@
 
 
                         <!-- ==================================================
-                             PROJETO 1 - MUNDO VERDE
+                             PROJETO 1
                         =================================================== -->
 
                         <article class="project-card">
+
 
                             <div class="project-image project-green">
 
@@ -798,7 +963,9 @@
                             </div>
 
 
+
                             <div class="project-content">
+
 
                                 <div class="project-top">
 
@@ -806,8 +973,10 @@
                                         Projeto 01
                                     </span>
 
+
                                     <a
                                         href="https://github.com/rodrigueslindomar2011-commits/EcoGuard-Tech"
+                                        class="external-link"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="Abrir projeto Mundo Verde"
@@ -826,9 +995,11 @@
 
 
                                 <p>
+
                                     Projeto voltado para tecnologia,
                                     sustentabilidade e conscientização
                                     ambiental.
+
                                 </p>
 
 
@@ -853,17 +1024,20 @@
                         </article>
 
 
+
                         <!-- ==================================================
-                             PROJETO 2 - SORTEADOR
+                             PROJETO 2
                         =================================================== -->
 
                         <article class="project-card">
+
 
                             <div class="project-image project-dark">
 
                                 <span class="project-category">
                                     JAVASCRIPT
                                 </span>
+
 
                                 <div class="project-symbol">
 
@@ -874,7 +1048,9 @@
                             </div>
 
 
+
                             <div class="project-content">
+
 
                                 <div class="project-top">
 
@@ -882,8 +1058,10 @@
                                         Projeto 02
                                     </span>
 
+
                                     <a
                                         href="https://github.com/rodrigueslindomar2011-commits/sorteador"
+                                        class="external-link"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="Abrir projeto Sorteador"
@@ -902,9 +1080,11 @@
 
 
                                 <p>
+
                                     Aplicação web para geração de
                                     números aleatórios com validações
                                     e interface responsiva.
+
                                 </p>
 
 
@@ -929,17 +1109,20 @@
                         </article>
 
 
+
                         <!-- ==================================================
-                             PROJETO 3 - MEU FUTURO
+                             PROJETO 3
                         =================================================== -->
 
                         <article class="project-card">
+
 
                             <div class="project-image project-blue">
 
                                 <span class="project-category">
                                     FULL STACK
                                 </span>
+
 
                                 <div class="project-symbol">
 
@@ -950,7 +1133,9 @@
                             </div>
 
 
+
                             <div class="project-content">
+
 
                                 <div class="project-top">
 
@@ -958,8 +1143,10 @@
                                         Projeto 03
                                     </span>
 
+
                                     <a
                                         href="https://github.com/rodrigueslindomar2011-commits/meu-portifolio"
+                                        class="external-link"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="Abrir projeto Meu Futuro"
@@ -978,9 +1165,11 @@
 
 
                                 <p>
+
                                     Plataforma para auxiliar estudantes
                                     no planejamento acadêmico e
                                     profissional.
+
                                 </p>
 
 
@@ -1009,22 +1198,30 @@
                 </div>
 
 
+
+                <!-- DOTS -->
+
                 <div
                     class="carousel-dots"
                     id="carouselDots"
                 >
 
                     <button
+                        type="button"
                         class="dot active"
                         aria-label="Projeto 1"
                     ></button>
 
+
                     <button
+                        type="button"
                         class="dot"
                         aria-label="Projeto 2"
                     ></button>
 
+
                     <button
+                        type="button"
                         class="dot"
                         aria-label="Projeto 3"
                     ></button>
@@ -1034,6 +1231,7 @@
             </div>
 
         </section>
+
 
 
         <!-- ==================================================
@@ -1046,6 +1244,7 @@
         >
 
             <div class="container">
+
 
                 <div class="section-heading centered">
 
@@ -1068,6 +1267,7 @@
                 </div>
 
 
+
                 <div class="timeline">
 
 
@@ -1075,20 +1275,25 @@
 
                         <div class="timeline-dot"></div>
 
+
                         <div class="timeline-content">
 
                             <span class="timeline-date">
                                 Formação
                             </span>
 
+
                             <h3>
                                 Desenvolvimento Web
                             </h3>
 
+
                             <p>
+
                                 Estudos e prática em HTML, CSS,
                                 JavaScript e desenvolvimento de
                                 aplicações web.
+
                             </p>
 
                         </div>
@@ -1096,9 +1301,11 @@
                     </div>
 
 
+
                     <div class="timeline-item">
 
                         <div class="timeline-dot"></div>
+
 
                         <div class="timeline-content">
 
@@ -1106,14 +1313,18 @@
                                 Backend
                             </span>
 
+
                             <h3>
                                 Node.js e APIs
                             </h3>
 
+
                             <p>
+
                                 Desenvolvimento de servidores,
                                 APIs e integração com bancos de
                                 dados.
+
                             </p>
 
                         </div>
@@ -1121,9 +1332,11 @@
                     </div>
 
 
+
                     <div class="timeline-item">
 
                         <div class="timeline-dot"></div>
+
 
                         <div class="timeline-content">
 
@@ -1131,14 +1344,18 @@
                                 Atualmente
                             </span>
 
+
                             <h3>
                                 Construindo projetos reais
                             </h3>
 
+
                             <p>
+
                                 Criação de projetos completos para
                                 desenvolver experiência e construir
                                 meu portfólio profissional.
+
                             </p>
 
                         </div>
@@ -1152,6 +1369,7 @@
         </section>
 
 
+
         <!-- ==================================================
              CONTATO
         =================================================== -->
@@ -1163,6 +1381,7 @@
 
             <div class="container">
 
+
                 <div class="contact-box">
 
 
@@ -1170,18 +1389,28 @@
 
                     <div class="contact-content">
 
+
                         <span class="section-label">
                             CONTATO
                         </span>
 
+
                         <h2>
+
                             Vamos criar algo
-                            <span>incrível.</span>
+
+                            <span>
+                                incrível.
+                            </span>
+
                         </h2>
 
+
                         <p>
+
                             Tem uma ideia, projeto ou oportunidade?
                             Entre em contato comigo.
+
                         </p>
 
 
@@ -1201,7 +1430,10 @@
                     </div>
 
 
-                    <!-- LINKS -->
+
+                    <!-- ==================================================
+                         LINKS DE CONTATO
+                    =================================================== -->
 
                     <div class="contact-links">
 
@@ -1210,9 +1442,11 @@
 
                         <a
                             href="mailto:rodrigueslindomar2011@gmail.com"
+                            class="contact-link"
                         >
 
                             <i class="fa-solid fa-envelope"></i>
+
 
                             <div>
 
@@ -1229,15 +1463,19 @@
                         </a>
 
 
+
                         <!-- GITHUB -->
 
                         <a
                             href="https://github.com/rodrigueslindomar2011-commits"
+                            class="contact-link external-link"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Abrir GitHub"
                         >
 
                             <i class="fa-brands fa-github"></i>
+
 
                             <div>
 
@@ -1254,15 +1492,19 @@
                         </a>
 
 
+
                         <!-- LINKEDIN -->
 
                         <a
                             href="https://www.linkedin.com/in/lindomar-pereira-rodrigues-da-costa/"
+                            class="contact-link external-link"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Abrir LinkedIn"
                         >
 
                             <i class="fa-brands fa-linkedin"></i>
+
 
                             <div>
 
@@ -1279,15 +1521,19 @@
                         </a>
 
 
+
                         <!-- INSTAGRAM -->
 
                         <a
                             href="https://www.instagram.com/lind.omar1105/"
+                            class="contact-link external-link"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Abrir Instagram"
                         >
 
                             <i class="fa-brands fa-instagram"></i>
+
 
                             <div>
 
@@ -1304,15 +1550,19 @@
                         </a>
 
 
+
                         <!-- WHATSAPP -->
 
                         <a
                             href="https://wa.me/5564999455915"
+                            class="contact-link external-link"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Abrir WhatsApp"
                         >
 
                             <i class="fa-brands fa-whatsapp"></i>
+
 
                             <div>
 
@@ -1339,6 +1589,7 @@
     </main>
 
 
+
     <!-- ==================================================
          FOOTER
     =================================================== -->
@@ -1348,9 +1599,12 @@
         <div class="container footer-container">
 
 
+            <!-- LOGO -->
+
             <a
                 href="#inicio"
                 class="logo"
+                aria-label="Voltar para o início"
             >
 
                 <span>&lt;</span>
@@ -1363,10 +1617,14 @@
 
 
             <p>
+
                 © 2026 Lindomar Pereira Rodrigues da Costa.
                 Todos os direitos reservados.
+
             </p>
 
+
+            <!-- VOLTAR AO TOPO -->
 
             <a
                 href="#inicio"
@@ -1383,7 +1641,10 @@
     </footer>
 
 
-    <!-- JavaScript -->
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
 
     <script src="js/script.js"></script>
 
