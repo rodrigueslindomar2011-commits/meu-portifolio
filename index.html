@@ -1,248 +1,1063 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio do Lindomar</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Portfólio profissional de Lindomar Rodrigues — Desenvolvedor Web."
+    >
+
+    <meta
+        name="author"
+        content="Lindomar Rodrigues"
+    >
+
+    <title>Lindomar Rodrigues | Desenvolvedor Web</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Ícones -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
 </head>
+
 <body>
-    <header>
-        <div class="profile"></div>
-        <img src="toji.jpg" alt="imagem de perfil" class="img">
-        <nav>
-            <h1>Lindomar</h1>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
+
+    <header class="header" id="header">
+
+        <div class="container nav-container">
+
+            <a href="#inicio" class="logo">
+                <span>&lt;</span>
+                LR
+                <span>/&gt;</span>
+            </a>
+
+            <nav class="nav" id="nav">
+
+                <a href="#inicio" class="nav-link active">
+                    Início
+                </a>
+
+                <a href="#sobre" class="nav-link">
+                    Sobre
+                </a>
+
+                <a href="#habilidades" class="nav-link">
+                    Habilidades
+                </a>
+
+                <a href="#projetos" class="nav-link">
+                    Projetos
+                </a>
+
+                <a href="#trajetoria" class="nav-link">
+                    Trajetória
+                </a>
+
+                <a href="#contato" class="nav-link">
+                    Contato
+                </a>
+
+            </nav>
+
+            <a
+                href="#contato"
+                class="nav-button"
+            >
+                Vamos conversar
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Abrir menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
     </header>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h2>Olá, eu sou o Lindomar 👋</h2>
-            <p>Desenvolvedor, tecnologia, inovação e aprendizado constante.</p>
-            <a href="#projetos" class="btn">Ver meus projetos</a>
+
+    <!-- ==================================================
+         HERO
+    =================================================== -->
+
+    <main>
+
+        <section
+            class="hero"
+            id="inicio"
+        >
+
+            <div class="hero-grid"></div>
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <span class="hero-tag">
+                        <span class="status-dot"></span>
+                        Disponível para novos projetos
+                    </span>
+
+                    <p class="hero-intro">
+                        Olá, eu sou
+                    </p>
+
+                    <h1>
+                        Lindomar
+                        <span>Rodrigues.</span>
+                    </h1>
+
+                    <h2>
+                        Desenvolvedor Web
+                    </h2>
+
+                    <p class="hero-description">
+                        Transformo ideias em experiências digitais
+                        modernas, funcionais e responsivas.
+                        Atualmente desenvolvendo projetos com
+                        tecnologias web, frontend, backend e banco
+                        de dados.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#projetos"
+                            class="button button-primary"
+                        >
+                            <i class="fa-solid fa-code"></i>
+                            Ver meus projetos
+                        </a>
+
+                        <a
+                            href="#contato"
+                            class="button button-outline"
+                        >
+                            Entrar em contato
+                        </a>
+
+                    </div>
+
+                    <div class="hero-socials">
+
+                        <a
+                            href="https://github.com/"
+                            target="_blank"
+                            aria-label="GitHub"
+                        >
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="LinkedIn"
+                        >
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="Instagram"
+                        >
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="code-window">
+
+                        <div class="window-top">
+
+                            <div class="window-buttons">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span class="window-title">
+                                developer.js
+                            </span>
+
+                        </div>
+
+                        <div class="code-content">
+
+                            <p>
+                                <span class="code-purple">
+                                    const
+                                </span>
+
+                                <span class="code-blue">
+                                    developer
+                                </span>
+
+                                =
+                            </p>
+
+                            <p class="indent">
+                                {
+                            </p>
+
+                            <p class="indent-2">
+                                nome:
+                                <span class="code-green">
+                                    "Lindomar"
+                                </span>,
+                            </p>
+
+                            <p class="indent-2">
+                                area:
+                                <span class="code-green">
+                                    "Web Development"
+                                </span>,
+                            </p>
+
+                            <p class="indent-2">
+                                foco:
+                                <span class="code-green">
+                                    "Full Stack"
+                                </span>,
+                            </p>
+
+                            <p class="indent-2">
+                                criatividade:
+                                <span class="code-orange">
+                                    true
+                                </span>,
+                            </p>
+
+                            <p class="indent-2">
+                                aprendizado:
+                                <span class="code-orange">
+                                    Infinity
+                                </span>
+                            </p>
+
+                            <p class="indent">
+                                };
+                            </p>
+
+                            <p class="cursor-line">
+                                <span>_</span>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="floating-card card-one">
+                        <i class="fa-solid fa-code"></i>
+                        <div>
+                            <strong>Web</strong>
+                            <span>Development</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-card card-two">
+                        <i class="fa-solid fa-database"></i>
+                        <div>
+                            <strong>Backend</strong>
+                            <span>Database</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="scroll-indicator">
+
+                <span>
+                    role para descobrir
+                </span>
+
+                <i class="fa-solid fa-arrow-down"></i>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             SOBRE
+        =================================================== -->
+
+        <section
+            class="section about"
+            id="sobre"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <div>
+                        <span class="section-label">
+                            SOBRE MIM
+                        </span>
+
+                        <h2>
+                            Conheça minha trajetória
+                        </h2>
+                    </div>
+
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-image">
+
+                        <div class="image-frame">
+
+                            <div class="image-placeholder">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="experience-card">
+
+                            <strong>
+                                10+
+                            </strong>
+
+                            <span>
+                                Projetos e experiências
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-content">
+
+                        <span class="mini-title">
+                            Quem sou eu?
+                        </span>
+
+                        <h3>
+                            Desenvolvedor apaixonado
+                            por tecnologia e criação.
+                        </h3>
+
+                        <p>
+                            Sou Lindomar Rodrigues, estudante e
+                            desenvolvedor em formação, interessado
+                            em tecnologia, programação e criação de
+                            soluções digitais.
+                        </p>
+
+                        <p>
+                            Meu objetivo é transformar conhecimentos
+                            em projetos reais, explorando desde a
+                            criação de interfaces até a construção
+                            de sistemas completos.
+                        </p>
+
+                        <div class="about-highlights">
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                <span>
+                                    Desenvolvimento Web
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                <span>
+                                    Interfaces responsivas
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                <span>
+                                    Backend e APIs
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                <span>
+                                    Banco de dados
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             HABILIDADES
+        =================================================== -->
+
+        <section
+            class="section skills"
+            id="habilidades"
+        >
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <div>
+                        <span class="section-label">
+                            TECNOLOGIAS
+                        </span>
+
+                        <h2>
+                            Minhas habilidades
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+
+                        <h3>HTML5</h3>
+
+                        <p>
+                            Estruturação semântica e acessível
+                            de páginas web.
+                        </p>
+
+                    </article>
+
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+
+                        <h3>CSS3</h3>
+
+                        <p>
+                            Interfaces responsivas, animações
+                            e experiências visuais.
+                        </p>
+
+                    </article>
+
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+
+                        <h3>JavaScript</h3>
+
+                        <p>
+                            Interações, lógica e aplicações
+                            web dinâmicas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-node-js"></i>
+                        </div>
+
+                        <h3>Node.js</h3>
+
+                        <p>
+                            Desenvolvimento de APIs e aplicações
+                            no backend.
+                        </p>
+
+                    </article>
+
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+
+                        <h3>Banco de dados</h3>
+
+                        <p>
+                            Organização, armazenamento e consulta
+                            de informações.
+                        </p>
+
+                    </article>
+
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-git-alt"></i>
+                        </div>
+
+                        <h3>Git & GitHub</h3>
+
+                        <p>
+                            Versionamento e organização
+                            de projetos.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             PROJETOS
+        =================================================== -->
+
+        <section
+            class="section projects"
+            id="projetos"
+        >
+
+            <div class="container">
+
+                <div class="projects-heading">
+
+                    <div class="section-heading">
+
+                        <span class="section-number">
+                            03
+                        </span>
+
+                        <div>
+                            <span class="section-label">
+                                PORTFÓLIO
+                            </span>
+
+                            <h2>
+                                Projetos em destaque
+                            </h2>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-controls">
+
+                        <button
+                            id="prevProject"
+                            aria-label="Projeto anterior"
+                        >
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+
+                        <button
+                            id="nextProject"
+                            aria-label="Próximo projeto"
+                        >
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="projects-carousel">
+
+                    <div
+                        class="projects-track"
+                        id="projectsTrack"
+                    >
+
+                        <!-- PROJETO 1 -->
+
+                        <article class="project-card">
+
+                            <div class="project-image project-green">
+
+                                <span class="project-category">
+                                    WEB
+                                </span>
+
+                                <div class="project-symbol">
+                                    <i class="fa-solid fa-leaf"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="project-content">
+
+                                <div class="project-top">
+
+                                    <span>
+                                        Projeto 01
+                                    </span>
+
+                                    <a
+                                        href="#"
+                                        aria-label="Abrir projeto"
+                                    >
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+
+                                </div>
+
+                                <h3>
+                                    Mundo Verde
+                                </h3>
+
+                                <p>
+                                    Projeto voltado para tecnologia,
+                                    sustentabilidade e conscientização
+                                    ambiental.
+                                </p>
+
+                                <div class="project-tech">
+
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- PROJETO 2 -->
+
+                        <article class="project-card">
+
+                            <div class="project-image project-dark">
+
+                                <span class="project-category">
+                                    JAVASCRIPT
+                                </span>
+
+                                <div class="project-symbol">
+                                    <i class="fa-solid fa-dice"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="project-content">
+
+                                <div class="project-top">
+
+                                    <span>
+                                        Projeto 02
+                                    </span>
+
+                                    <a
+                                        href="#"
+                                        aria-label="Abrir projeto"
+                                    >
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+
+                                </div>
+
+                                <h3>
+                                    Sorteador
+                                </h3>
+
+                                <p>
+                                    Aplicação web para geração de
+                                    números aleatórios com validações
+                                    e interface responsiva.
+                                </p>
+
+                                <div class="project-tech">
+
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- PROJETO 3 -->
+
+                        <article class="project-card">
+
+                            <div class="project-image project-blue">
+
+                                <span class="project-category">
+                                    FULL STACK
+                                </span>
+
+                                <div class="project-symbol">
+                                    <i class="fa-solid fa-rocket"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="project-content">
+
+                                <div class="project-top">
+
+                                    <span>
+                                        Projeto 03
+                                    </span>
+
+                                    <a
+                                        href="#"
+                                        aria-label="Abrir projeto"
+                                    >
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+
+                                </div>
+
+                                <h3>
+                                    Meu Futuro
+                                </h3>
+
+                                <p>
+                                    Plataforma para auxiliar estudantes
+                                    no planejamento acadêmico e
+                                    profissional.
+                                </p>
+
+                                <div class="project-tech">
+
+                                    <span>HTML</span>
+                                    <span>Node.js</span>
+                                    <span>SQLite</span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <div class="carousel-dots" id="carouselDots">
+
+                    <button class="dot active"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             TRAJETÓRIA
+        =================================================== -->
+
+        <section
+            class="section timeline-section"
+            id="trajetoria"
+        >
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <div>
+                        <span class="section-label">
+                            TRAJETÓRIA
+                        </span>
+
+                        <h2>
+                            Minha jornada
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+
+                            <span class="timeline-date">
+                                Formação
+                            </span>
+
+                            <h3>
+                                Desenvolvimento Web
+                            </h3>
+
+                            <p>
+                                Estudos e prática em HTML, CSS,
+                                JavaScript e desenvolvimento de
+                                aplicações web.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+
+                            <span class="timeline-date">
+                                Backend
+                            </span>
+
+                            <h3>
+                                Node.js e APIs
+                            </h3>
+
+                            <p>
+                                Desenvolvimento de servidores,
+                                APIs e integração com bancos de
+                                dados.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+
+                            <span class="timeline-date">
+                                Atualmente
+                            </span>
+
+                            <h3>
+                                Construindo projetos reais
+                            </h3>
+
+                            <p>
+                                Criação de projetos completos para
+                                desenvolver experiência e construir
+                                meu portfólio profissional.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             CONTATO
+        =================================================== -->
+
+        <section
+            class="section contact"
+            id="contato"
+        >
+
+            <div class="container">
+
+                <div class="contact-box">
+
+                    <div class="contact-content">
+
+                        <span class="section-label">
+                            CONTATO
+                        </span>
+
+                        <h2>
+                            Vamos criar algo
+                            <span>incrível.</span>
+                        </h2>
+
+                        <p>
+                            Tem uma ideia, projeto ou oportunidade?
+                            Entre em contato comigo.
+                        </p>
+
+                        <a
+                            href="mailto:seuemail@email.com"
+                            class="button button-primary"
+                        >
+                            <i class="fa-solid fa-envelope"></i>
+                            Enviar mensagem
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-links">
+
+                        <a
+                            href="mailto:seuemail@email.com"
+                        >
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <div>
+                                <span>Email</span>
+                                <strong>
+                                    seuemail@email.com
+                                </strong>
+                            </div>
+                        </a>
+
+
+                        <a
+                            href="https://github.com/"
+                            target="_blank"
+                        >
+                            <i class="fa-brands fa-github"></i>
+
+                            <div>
+                                <span>GitHub</span>
+                                <strong>
+                                    Meu GitHub
+                                </strong>
+                            </div>
+                        </a>
+
+
+                        <a href="#">
+
+                            <i class="fa-brands fa-linkedin"></i>
+
+                            <div>
+                                <span>LinkedIn</span>
+                                <strong>
+                                    Meu LinkedIn
+                                </strong>
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <a href="#inicio" class="logo">
+                <span>&lt;</span>
+                LR
+                <span>/&gt;</span>
+            </a>
+
+            <p>
+                © 2026 Lindomar Rodrigues.
+                Todos os direitos reservados.
+            </p>
+
+            <a href="#inicio" class="back-top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+
         </div>
-    </section>
 
-    <section id="sobre">
-        <h2>Sobre mim</h2>
-        <p>
-            Sou Lindomar, um desenvolvedor dedicado a criar soluções criativas e funcionais. 
-            Tenho experiência em HTML, CSS, JavaScript e frameworks modernos. 
-            Busco constantemente aprimorar minhas habilidades e contribuir com projetos desafiadores.Programar é construir
-             o futuro com as próprias mãos. É transformar uma ideia em algo concreto, funcional e útil. Meu objetivo é continuar
-             crescendo nessa jornada, desenvolvendo soluções criativas e sustentáveis.
-        </p>
-    </section>
-
-    <section id="projetos">
-        <h2>Projetos</h2>
-        <div class="projetos-container">
-            <div class="projeto">
-                <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
-                <h3>Projeto 1</h3>
-                <p>Criacao de uma gameficação:R.E.A.D</p>
-            </div>
-
-            <div class="projeto">
-                <img src="https://via.placeholder.com/300x200" alt="Projeto 2">
-                <h3>Projeto 2</h3>
-                <p>Aplicação web desenvolvida em React, focada em performance e design moderno.</p>
-            </div>
-
-            <div class="projeto">
-                <img src="https://via.placeholder.com/300x200" alt="Projeto 3">
-                <h3>Projeto 3</h3>
-                <p>Projeto pessoal com foco em automação e uso de APIs para melhorar produtividade.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Entre em contato comigo pelas redes sociais ou envie um e-mail:</p>
-        <ul>
-            <li>Email: <a href="mailto:rodrigueslindomar2011@gmail.com">rodrigueslindomar2011@gmail.com</a></li>
-            <li>GitHub: <a href="https://github.com/rodrigueslindomar2011-commits/meu-portifolio">https://github.com/rodrigueslindomar2011-commits/meu-portifolio</a></li>
-            <li>Instagram: <a href="https://www.instagram.com/lind.omar1105/">lind.omar1105</a></li>
-            <li>WhatsApp: <a href="#">64-999455915</a></li>
-            <li>Linkedin: <a href="https://www.linkedin.com/in/lindomar-pereira-rodrigues-da-costa/">https://www.linkedin.com/in/lindomar-pereira-rodrigues-da-costa/</a></li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Lindomar. Todos os direitos reservados.</p>
     </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
 </body>
-<style>
-/* ===== Estilos gerais ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
-    line-height: 1.6;
-}
-
-/* ===== Cabeçalho ===== */
-header {
-    background: #07406c;
-    color: white;
-    padding: 1rem 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: 0 auto;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-nav a {
-    color: rgb(202, 192, 192);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* ===== Seção Hero ===== */
-#hero {
-    background: linear-gradient(135deg, #07406c, #07406c);
-    color: white;
-    text-align: center;
-    padding: 4rem 2rem;
-}
-
-#hero .btn {
-    display: inline-block;
-    background: white;
-    color: #1f2d34;
-    padding: 0.75rem 1.5rem;
-    border-radius: 30px;
-    margin-top: 1rem;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-#hero .btn:hover {
-    background: #caf0f8;
-}
-
-/* ===== Seção Sobre ===== */
-#sobre {
-    padding: 3rem 2rem;
-    text-align: center;
-    background: #fff;
-}
-
-#sobre h2 {
-    color: #0077b6;
-    margin-bottom: 1rem;
-}
-
-/* ===== Seção Projetos ===== */
-#projetos {
-    background: #f1f1f1;
-    padding: 3rem 2rem;
-    text-align: center;
-}
-
-.projetos-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-
-.projeto {
-    background: #fff;
-    border-radius: 10px;
-    width: 300px;
-    padding: 1rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.projeto:hover {
-    transform: translateY(-5px);
-}
-
-.projeto img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* ===== Contato ===== */
-#contato {
-    padding: 3rem 2rem;
-    background: #fff;
-    text-align: center;
-}
-
-#contato ul {
-    list-style: none;
-    margin-top: 1rem;
-}
-
-#contato a {
-    color: #0077b6;
-    text-decoration: none;
-}
-
-#contato a:hover {
-    text-decoration: underline;
-}
-
-/* ===== Rodapé ===== */
-footer {
-    background: #0077b6;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    margin-top: 2rem;
-}
-
-/* ===== Responsividade ===== */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .projetos-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-.img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover; 
-  overflow: hidden; 
-  display: block;
-  margin: 0 auto;
-}
-</style>
 </html>
-
